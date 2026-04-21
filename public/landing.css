@@ -1732,16 +1732,14 @@ img {
   accent-color: var(--accent);
 }
 
-.color-swatch {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.color-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.color-swatch--black { background: #000000; }
-.color-swatch--golden { background: #FFD700; }
-.color-swatch--silver { background: #C0C0C0; }
 
 .color-name {
   font-size: 0.9rem;

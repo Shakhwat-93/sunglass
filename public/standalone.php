@@ -360,7 +360,7 @@ if (! function_exists('standalone_handle_request')) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="<?= standalone_e(standalone_media($page['hero_image'] ?? '') ?? '') ?>">
-    <link rel="stylesheet" href="/landing.css?v=1.3">
+    <link rel="stylesheet" href="/landing.css?v=1.4">
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PMHNV9HJ');</script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -591,17 +591,17 @@ if (! function_exists('standalone_handle_request')) {
                                     <div class="color-options">
                                         <label class="color-option">
                                             <input type="checkbox" name="colors[]" value="Black" checked>
-                                            <span class="color-swatch color-swatch--black"></span>
+                                            <img src="/assets/1772787522436_1.jpeg" alt="Black" class="color-img">
                                             <span class="color-name">Black</span>
                                         </label>
                                         <label class="color-option">
                                             <input type="checkbox" name="colors[]" value="Golden">
-                                            <span class="color-swatch color-swatch--golden"></span>
+                                            <img src="/assets/1772785499339_3.jpeg" alt="Golden" class="color-img">
                                             <span class="color-name">Golden</span>
                                         </label>
                                         <label class="color-option">
                                             <input type="checkbox" name="colors[]" value="Silver">
-                                            <span class="color-swatch color-swatch--silver"></span>
+                                            <img src="/assets/silver-color.jpg" alt="Silver" class="color-img">
                                             <span class="color-name">Silver</span>
                                         </label>
                                     </div>
@@ -731,6 +731,20 @@ if (! function_exists('standalone_handle_request')) {
             });
 
             updateTotal();
+
+            const checkoutForm = document.getElementById('checkout-form');
+            if (checkoutForm) {
+                checkoutForm.addEventListener('submit', function(e) {
+                    const submitBtn = document.querySelector('.checkout-submit');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.style.opacity = '0.7';
+                        submitBtn.style.cursor = 'not-allowed';
+                        const span = submitBtn.querySelector('span');
+                        if (span) span.innerText = 'প্রসেসিং হচ্ছে...';
+                    }
+                });
+            }
         });
     </script>
 </body>
@@ -754,7 +768,7 @@ if (! function_exists('standalone_handle_request')) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/landing.css?v=1.3">
+    <link rel="stylesheet" href="/landing.css?v=1.4">
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PMHNV9HJ');</script>
     <script>
         window.dataLayer = window.dataLayer || [];
